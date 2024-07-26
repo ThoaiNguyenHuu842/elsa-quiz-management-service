@@ -1,0 +1,59 @@
+server:
+  port: 8084
+
+spring:
+  data:
+    mongodb:
+      database: quiz
+      host: localhost
+      password: quiz_pwd
+      port: 27017
+      username: quiz_user
+
+#  cloud:
+#    function:
+#      definition: consumeOrderCreated;consumeOrderProcessed
+#    stream:
+#      kafka:
+#        binder:
+#          brokers: localhost:9092
+#        bindings:
+#          # checkout service to produce orderCreated message
+#          produceOrderCreated-out-0:
+#            producer:
+#              configuration:
+#                key.serializer: org.apache.kafka.common.serialization.StringSerializer
+#                value.serializer: org.springframework.kafka.support.serializer.JsonSerializer
+#          # order service to produce orderProcessed message
+#          produceOrderProcessed-out-0:
+#            producer:
+#              configuration:
+#                key.serializer: org.apache.kafka.common.serialization.StringSerializer
+#                value.serializer: org.springframework.kafka.support.serializer.JsonSerializer
+#          # order service to consume consumeOrderCreated message
+#          consumeOrderCreated-in-0:
+#            consumer:
+#              configuration:
+#                key.serializer: org.apache.kafka.common.serialization.StringSerializer
+#                value.serializer: org.springframework.kafka.support.serializer.JsonSerializer
+#          # fulfillment service to consume consumeOrderProcessed message
+#          consumeOrderProcessed-in-0:
+#            consumer:
+#              configuration:
+#                key.serializer: org.apache.kafka.common.serialization.StringSerializer
+#                value.serializer: org.springframework.kafka.support.serializer.JsonSerializer
+#      bindings:
+#        produceOrderCreated-out-0:
+#          destination: orderCreatedTopic
+#          producer:
+#            use-native-encoding: true
+#        produceOrderProcessed-out-0:
+#          destination: orderProcessedTopic
+#          producer:
+#            use-native-encoding: true
+#        consumeOrderCreated-in-0:
+#          destination: orderCreatedTopic
+#          group: OrderCreatedConsumer
+#        consumeOrderProcessed-in-0:
+#          destination: orderProcessedTopic
+#          group: OrderProcessedConsumer
