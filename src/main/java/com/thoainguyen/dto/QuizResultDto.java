@@ -1,6 +1,5 @@
 package com.thoainguyen.dto;
 
-import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -10,8 +9,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class QuizAnswerDto {
+public class QuizResultDto {
   private String connectionId;
+  private String quizId;
   private String userName;
-  private List<AnswerDto> answers;
+  private Integer score;
+  private String formattedScore;
+  private String error;
 }

@@ -19,6 +19,6 @@ public class Question {
   private String question;
   @Field(value = "answers")
   private List<String> answers;
-  @Field(value = "correctAnswer")
+  @Field(value = "correct_answer")
   private int correctAnswer;
 }

@@ -11,7 +11,7 @@ db.createUser(
         }
 );
 
-db.createCollection("quiz_answer")
+db.createCollection("quiz_answers")
 
 db.createCollection("quiz")
 
@@ -42,7 +42,7 @@ db.quiz.insert([
        }
      ],
      "start_time" : ISODate("2024-06-30T14:28:17.585Z"),
-     "end_time" : ISODate("2024-08-30T14:28:17.585Z")
+     "end_time" : ISODate("2100-08-30T14:28:17.585Z")
    },
    {
      "_id": NumberDecimal("2"),
@@ -68,8 +68,9 @@ db.quiz.insert([
        }
      ],
      "start_time" : ISODate("2024-06-30T14:28:17.585Z"),
-     "end_time" : ISODate("2024-08-30T14:28:17.585Z")
+     "end_time" : ISODate("2100-08-30T14:28:17.585Z")
    },
+   //invalid quiz cause it is finished already
    {
     "_id": NumberDecimal("3"),
      "quiz_id": "3c4d5e6f",
@@ -94,7 +95,7 @@ db.quiz.insert([
        }
      ],
      "start_time" : ISODate("2024-06-30T14:28:17.585Z"),
-     "end_time" : ISODate("2024-08-30T14:28:17.585Z")
+     "end_time" : ISODate("2024-07-01T14:28:17.585Z")
    },
    {
      "_id": NumberDecimal("4"),
@@ -120,7 +121,7 @@ db.quiz.insert([
        }
      ],
      "start_time" : ISODate("2024-06-30T14:28:17.585Z"),
-     "end_time" : ISODate("2024-08-30T14:28:17.585Z")
+     "end_time" : ISODate("2100-08-30T14:28:17.585Z")
    },
    {
      "_id": NumberDecimal("5"),
@@ -146,7 +147,7 @@ db.quiz.insert([
        }
      ],
      "start_time" : ISODate("2024-06-30T14:28:17.585Z"),
-     "end_time" : ISODate("2024-08-30T14:28:17.585Z")
+     "end_time" : ISODate("2100-08-30T14:28:17.585Z")
    },
    {
      "_id": NumberDecimal("6"),
@@ -172,7 +173,7 @@ db.quiz.insert([
        }
      ],
      "start_time" : ISODate("2024-06-30T14:28:17.585Z"),
-     "end_time" : ISODate("2024-08-30T14:28:17.585Z")
+     "end_time" : ISODate("2100-08-30T14:28:17.585Z")
    },
    {
      "_id": NumberDecimal("7"),
@@ -198,7 +199,7 @@ db.quiz.insert([
        }
      ],
      "start_time" : ISODate("2024-06-30T14:28:17.585Z"),
-     "end_time" : ISODate("2024-08-30T14:28:17.585Z")
+     "end_time" : ISODate("2100-08-30T14:28:17.585Z")
    },
    {
      "_id": NumberDecimal("8"),
@@ -224,7 +225,7 @@ db.quiz.insert([
        }
      ],
      "start_time" : ISODate("2024-06-30T14:28:17.585Z"),
-     "end_time" : ISODate("2024-08-30T14:28:17.585Z")
+     "end_time" : ISODate("2100-08-30T14:28:17.585Z")
    },
    {
      "_id": NumberDecimal("9"),
@@ -250,7 +251,7 @@ db.quiz.insert([
        }
      ],
      "start_time" : ISODate("2024-06-30T14:28:17.585Z"),
-     "end_time" : ISODate("2024-08-30T14:28:17.585Z")
+     "end_time" : ISODate("2100-08-30T14:28:17.585Z")
    },
    {
      "_id": NumberDecimal("10"),
@@ -276,7 +277,7 @@ db.quiz.insert([
        }
      ],
      "start_time" : ISODate("2024-06-30T14:28:17.585Z"),
-     "end_time" : ISODate("2024-08-30T14:28:17.585Z")
+     "end_time" : ISODate("2100-08-30T14:28:17.585Z")
    }
   ]
 )

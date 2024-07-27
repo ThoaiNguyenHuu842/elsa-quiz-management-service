@@ -11,12 +11,12 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-@Document(collection = "quiz_answer")
+@Document(collection = "quiz_answers")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class QuizAnswer {
+public class QuizAnswers {
   @Id
   private BigInteger id;
   @Field(value = "connection_id")
@@ -26,7 +26,7 @@ public class QuizAnswer {
   @Field(value = "quiz_id")
   private BigInteger quizId;
   @Field("submitted_time")
-  private Date endTime;
+  private Date submittedTime;
   @Field("score")
   private Integer score;
   @Field("formatted_score")

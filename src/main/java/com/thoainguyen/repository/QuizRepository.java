@@ -10,8 +10,10 @@ import reactor.core.publisher.Mono;
 
 public interface QuizRepository extends ReactiveMongoRepository<Quiz, BigInteger> {
   @ExistsQuery("{'quizId':?0, 'startTime':{$lte:?1}, 'endTime':{$gte:?1}}")
-  Mono<Boolean> existByQuizId(String quizId, Date now);
+  Mono<Boolean> existsByQuizId(String quizId, Date now);
 
   @Query("{'quizId':?0, 'startTime':{$lte:?1}, 'endTime':{$gte:?1}}")
   Mono<Quiz> findByQuizId(String quizId, Date now);
+
+  Mono<Quiz> findOneByQuizId(String quizId);
 }
